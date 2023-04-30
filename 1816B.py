@@ -32,4 +32,9 @@ while n_tests > 0:
     print(f"{res_1}\n{res_2}")
     n_tests -= 1
 
-# success
+# manually sets the last value of the bottom row to be the greatest odd value available,
+# then fills in the remaining places of both rows, alternating between ascending and descending
+# order, top row is only even values. bottom row only odd values.
+# eg top: 8 2 6 4
+# bottom: 1 5 3 7
+# pointers are used to keep track of smallest unused odd/ even value
