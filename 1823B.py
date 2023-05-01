@@ -24,6 +24,7 @@ def solve(n, k, p):
         if count <= 2:  # if this is true, then exactly two elements are misplaced .'. only 1 pre-swap is required
             return 1
     return -1
+
 # currently fails when 1 swap would allow the remaining swaps to occur properly. eg 4 2: 3 1 4 2
 # if you swapped the 1 and 4 you would have 3 4 1 2, which can then be sorted with the step k (2)
 
