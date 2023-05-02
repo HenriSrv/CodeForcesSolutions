@@ -8,6 +8,12 @@ def solve(n, k, arr):
     if arr == target:  # if list already sorted, return 0 immediately
         return 0
 
+    count = 0
+
+    for i in range(n):
+        if arr[i] != target[i]:
+            count += 1
+
     for j in range(n):  # compare each i and (i + k)th element to see if they can be swapped
         for i in range(n-k):
             if arr[i] > arr[i + k]:
@@ -16,12 +22,12 @@ def solve(n, k, arr):
     if arr == target:
         return 0
 
-    count = 0
-    while count <= 2:
+    new_count = 0
+    while new_count <= 2:
         for i in range(n):
             if arr[i] != target[i]:
-                count += 1
-        if count <= 2:  # if this is true, then exactly two elements are misplaced .'. only 1 pre-swap is required
+                new_count += 1
+        if new_count <= 2:  # if this is true, then exactly two elements are misplaced .'. only 1 pre-swap is required
             return 1
     return -1
 
@@ -47,3 +53,6 @@ def main():
 while n_tests > 0:
     print(main())
     n_tests -= 1
+
+
+# sloppy and over complicated - moving on
